@@ -30,4 +30,3 @@ The project uses the following technologies:
 - [Vite](https://vitejs.dev/)
 
 Feel free to explore the project!
-# hungerhero
