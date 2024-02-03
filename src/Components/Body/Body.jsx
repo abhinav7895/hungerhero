@@ -30,7 +30,7 @@ function Body() {
         <>
           <Carousel carouselCards={carouselCards} />
         <div className="mx-auto container my-9">
-          <h2 className="text text-3xl font-semibold pl-6 ">
+          <h2 className="text text-lg text-center md:text-start  md:text-3xl font-semibold pl-6 ">
             Restaurants with online food delivery in Lucknow
           </h2>
           <div className="container grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center my-9 gap-y-16">
