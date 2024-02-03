@@ -7,6 +7,9 @@ export const SWIGGY_API_URL =
     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.8912141&lng=81.0648758&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
   );
 
+  export const CARD_URL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/";
+
 // export const RESTAURANT_API_URL = {
 //   319086: "https://run.mocky.io/v3/2825c11c-b106-40cf-94ce-5ed126356795",
 //   19563: "https://run.mocky.io/v3/fe8cf0f9-813d-4935-985a-a8844970c7fb",

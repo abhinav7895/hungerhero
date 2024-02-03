@@ -21,15 +21,15 @@ function Search({ setFilteredRestaurantList, mainRestaurantList }) {
 
   return (
     <>
-      <div className="container mt-[80px] mx-auto sm:w-[350px] md:w-[400px] mb-5 px-3">
+      <div className="container mt-[100px] mx-auto sm:w-[350px] md:w-[400px] mb-5 px-3">
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
         >
           Search
         </label>
-        <div className="relative">
-          <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+        <div className="relative ">
+          <div className="absolute  inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
             <svg
               className="w-4 h-4 text-gray-500 dark:text-gray-400"
               aria-hidden="true"

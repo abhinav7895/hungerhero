@@ -3,21 +3,21 @@ import { SWIGGY_API_URL } from "../utils/constants";
 
 function useRestaurantData() {
     const [restaurantData, setRestaurantData] = useState([]);
+    const [carouselCards, setCarouselCards] = useState([]);
 
     useEffect(() => {
         const getRestaurantData = async () => {
             try {
                 const response = await fetch(SWIGGY_API_URL);
-                
+
                 if (!response.ok) {
                     throw new Error("Network response was not ok, check out the API URL");
                 }
                 const data = await response.json();
-                console.log(data);
                 const restaurantData =
                     data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map(
                         (restaurant) => {
-                            
+
                             return {
                                 id: restaurant?.info?.id,
                                 name: restaurant?.info?.name,
@@ -39,6 +39,13 @@ function useRestaurantData() {
                             };
                         }
                     );
+
+                    // carousel response
+                    const carouselData = data?.data?.cards[0]?.card?.card?.gridElements?.infoWithStyle?.info;
+                    console.log(carouselData);
+                setCarouselCards(
+                    carouselData
+                );
                 setRestaurantData(restaurantData);
             } catch (error) {
                 console.error("Error", error);
@@ -46,7 +53,7 @@ function useRestaurantData() {
         };
         getRestaurantData();
     }, []);
-    return restaurantData;
+    return {restaurantData, carouselCards};
 }
 
 export default useRestaurantData;

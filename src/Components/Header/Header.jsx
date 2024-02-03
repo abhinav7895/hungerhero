@@ -50,20 +50,20 @@ function Header() {
           {['/', '/about', '/contact', '/faqs', '/cart'].map((path) => (
             <li
               key={path}
-              className={`text-2xl text-white px-2 select-none py-1 rounded ${
+              className={`text-2xl text-gray-800 border-2 bg-gray-200  px-2 select-none py-1 rounded ${
                 pathname === path
-                  ? 'bg-blue-500 hover:bg-blue-600'
-                  : 'bg-[#d74112] hover:bg-red-600'
+                  ? 'border-blue-300 hover:bg-gray-100 '
+                  : 'border-red-300 hover:bg-gray-100'
               }`}
             >
-              <Link to={path} onClick={handleNavItemClick} className="flex justify-center items-center gap-3">
+              <Link to={path} onClick={handleNavItemClick} className="last:flex justify-center items-center gap-3">
                 {path === '/cart' ? (
                   <>
                     <FaShoppingCart />
                     {cartItems.length}
                   </>
                 ) : (
-                  path === "/" ? "Home" : path.substring(1).toUpperCase()
+                  path === "/" ? "Home" : path.charAt(1).toUpperCase() + path.slice(2)
                 )}
               </Link>
             </li>
