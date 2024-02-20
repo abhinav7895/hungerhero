@@ -24,7 +24,7 @@ function RestaurantsMenu() {
   if (resInfo === null) {
     return <SpinnerEffect/>
   }
-  console.log(resInfo?.cards);
+
   const {
     areaName,
     avgRatingString,
