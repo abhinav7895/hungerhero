@@ -21,14 +21,13 @@ const RestaurantItems = (props) => {
     <li className="border rounded-md p-2">
       <label
         htmlFor={title}
-        onClick={() => {handleLabelClick(index)}}
+        onClick={() => {
+          handleLabelClick(index);
+        }}
         className="flex justify-between items-center text-lg font-semibold text-gray-800"
       >
         {title}
-        <span>
-            {activeIndex === index ? <SlArrowUp /> :
-        <SlArrowDown />}
-        </span>
+        <span>{activeIndex === index ? <SlArrowUp /> : <SlArrowDown />}</span>
       </label>
       <div className="content flex flex-col gap-3">
         {activeIndex === index &&

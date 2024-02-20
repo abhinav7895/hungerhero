@@ -37,7 +37,7 @@ function RestaurantsMenu() {
 
 
   const categoryFiltered =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
@@ -49,7 +49,7 @@ function RestaurantsMenu() {
     
   return (
     <>
-      <div className="container px-5 mx-auto mt-[140px]">
+      <div className="container px-5 mx-auto mt-[140px] mb-10">
         <div className="flex justify-between">
           <div>
             <h1 className="text-2xl font-semibold text-gray-900">{name}</h1>

@@ -22,8 +22,6 @@ function Body() {
         mainRestaurantList={restaurantData}
         filteredRestaurantList={filteredRestaurantList}
       />
-
-
       {restaurantData.length === 0 ? (
         <Shimmer />
       ) : (
